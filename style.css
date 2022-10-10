@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.line {
+  position: absolute;
+  background-color: white;
+  width: 0.5px;
+  height: 0.5px;
+}
+
+.vertical {
+  left: 50%;
+  height: 100%;
+}
+
+.horizontal {
+  top: 50%;
+  width: 100%;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(15%, 35%);
+  color: white;
+}
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+}
