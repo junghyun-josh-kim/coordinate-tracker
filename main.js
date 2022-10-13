@@ -1,16 +1,15 @@
-const verticalLine = document.querySelector('.vertical');
-const horizontalLine = document.querySelector('.horizontal');
-const targetImg = document.querySelector('.img');
-const coordinate = document.querySelector('span');
+const body = document.querySelector('body');
+const lineX = document.querySelector('.x');
+const lineY = document.querySelector('.y');
+const target = document.querySelector('i');
+const text = document.querySelector('#text');
 
-window.addEventListener('mousemove', (event) => {
-  const x = event.clientX;
-  const y = event.clientY;
-  verticalLine.style.left = `${x}px`;
-  horizontalLine.style.top = `${y}px`;
-  targetImg.style.top = `${y}px`;
-  targetImg.style.left = `${x}px`;
-  coordinate.innerText = `${x}px, ${y}px`;
-  coordinate.style.top = `${y}px`;
-  coordinate.style.left = `${x}px`;
+body.addEventListener('mousemove', (event) => {
+  text.innerText = `${event.pageX}px, ${event.pageY}px`;
+  text.style.top = `${event.pageY}px`;
+  text.style.left = `${`${event.pageX}px`}`;
+  lineX.style.top = `${event.pageY}px`;
+  lineY.style.left = `${event.pageX}px`;
+  target.style.top = `${event.pageY}px`;
+  target.style.left = `${event.pageX}px`;
 });
